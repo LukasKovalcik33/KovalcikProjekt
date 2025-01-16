@@ -212,31 +212,6 @@ void writeTitlesToScreen() {
   u8x8.drawString(8,4,"Pump:  ");
 }
 
-void writeError(float *airT, float *airH, int *flowerHVal) {
-  // Vycisti display
-  u8x8.clearDisplay();
-
-  // Vypis chybovz stav
-  u8x8.setFont(u8x8_font_amstrad_cpc_extended_f);
-  u8x8.setInverseFont(0);
-  u8x8.setCursor(0,4);
-  u8x8.setInverseFont(1);
-  u8x8.print("     Error:     ");
-
-  u8x8.setInverseFont(0);
-
-  // Teplota vzduchu
-  u8x8.setCursor(0,5);
-  isnan(*airT) ? u8x8.print("err") : u8x8.print("ok");
-
-  // Vlhkost vzduchu
-  u8x8.setCursor(7,5);
-  isnan(*airH) ? u8x8.print("err") : u8x8.print("ok");
-
-  // Vlhkost kvetinaca
-  u8x8.setCursor(13,5);
-  isnan(*flowerHVal) ? u8x8.print("err") : u8x8.print("ok");
-}
 
 /*
   Since MoistureLimit is READ_WRITE variable, onMoistureLimitChange() is
