@@ -7,6 +7,7 @@
 Projekt je zameraný na automatické zavlažovanie s využitím mikrokontorléra Arduino Nano 33. Napojením senzorov vlhkosti a teploty prostredia zisťujeme lokálne podmienky, ktoré majú vplyv na rastlinu a jej prežívanie. Napríklad v prípade určitej kombinácie ako je vysoká vlhkosť a vysoká teplota vzduchu sú rastliny náchylnejšie na rôzne plesne. Na druhej strane pomocou kapacitného senzoru vlhkosti pôdy vieme zistiť, kedy je potrebné danú pôdu zalievať a prostrtredníctvom relé modulu ovládame vodnú pumpu, ktorá ju v prípade potreby aj zaleje. Tento projekt tak slúži ako prototyp a ukážka zariadenia za relatívne nízke náklady, ktorý by mohol žiakom na školách ukázať, ako by mohlo fungovať využívanie internetu vecí napríklad na praktické riešenie pôdneho sucha alebo iných nežiadúcich klimatických javov.
 
 Zdroje:
+
 Arduino IoT Cloud Fundamentals | 2024 Step-by-Step Guide
 (779) Power ANY Arduino Project - The Ultimate Guide - YouTube
 (779) Water Your Garden with IoT - Soil Moisture Sensors - YouTube
@@ -27,6 +28,7 @@ Použité komponenty:
 10. Hadička na vodu
 
 Schéma zapojenia:
+
 Napájanie celého obvodu:
 · Napájací modul MB102 je zapojený na nepájivé pole tak, aby poskytoval 5 V na krajné napájacie lišty (červená - +5 V, modrá - GND).
 · Arduino Nano 33 IoT je napájané z napájacieho modulu MB102 cez piny Vin (5 V) a GND.
@@ -63,6 +65,7 @@ Zapojenie pumpy na zavlažovanie:
    Čierny kábel uzatvára obvod na GND cez breadboard, červený kábel vedie napätie na pumpu cez spínací výstup relé. Ako už bolo spomenuté, Arduino Nano 33 ovláda relé cez digitálny pin D8, čím umožňuje kontrolu činnosti pumpy.
 
 Komentár kódu:
+
 1. Zahrnuté knižnice:
 #include "arduino_secrets.h": Obsahuje prihlasovacie údaje na WiFi sieť.
 #include "thingProperties.h": Automaticky generovaný súbor obsahujúci premenné a funkcie na prácu s Arduino IoT Cloud.
